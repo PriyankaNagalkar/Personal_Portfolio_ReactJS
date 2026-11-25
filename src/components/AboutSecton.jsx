@@ -1,79 +1,64 @@
 
-import { BriefcaseBusiness, Code2, MonitorSmartphone } from "lucide-react"
-
 function AboutSection() {
-
-    const stats = [
-        {
-            id: 1,
-            icon: BriefcaseBusiness,
-            value: "5+",
-            label: "Years Experience"
-        },
-        {
-            id: 2,
-            icon: Code2,
-            value: "React & Vue",
-            label: "Frontend Skills"
-        },
-        {
-            id: 3,
-            icon: MonitorSmartphone,
-            value: "UI/UX",
-            label: "Responsive Design"
-        }
-    ]
-
     return (
         <section
-            className="text-white mt-20 py-16 relative overflow-hidden"
+            className="text-white py-16 md:py-20 relative overflow-hidden"
             id="about"
         >
-
             {/* Background Glow */}
             <div className="absolute top-20 left-0 w-72 h-72 bg-primary/10 blur-[120px] rounded-full" />
 
-            <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-16 relative z-10">
+            <div className="max-w-6xl mx-auto px-5 md:px-8 lg:px-16 relative z-10">
 
-                <div className="max-w-4xl mx-auto">
+                <div
+                    className="max-w-5xl mx-auto text-center"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                >
 
-                    {/* LEFT SIDE - About Content */}
-                    <div data-aos="fade-right">
-
+                    {/* Section Heading */}
+                    <div className="mb-8">
                         <p className="text-primary text-sm uppercase tracking-widest font-semibold mb-3">
                             Get To Know Me
                         </p>
 
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+                        <h2 className="text-4xl md:text-5xl font-extrabold text-white">
                             More{" "}
-                            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-white">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-white">
                                 About
                             </span>{" "}
                             Me.
                         </h2>
+                    </div>
 
-                        <p className="text-gray-400 text-base lg:text-lg mb-5 leading-relaxed">
-                            I'm a Frontend Developer with 5 years of experience building and maintaining responsive, scalable web applications using React.js, Vue.js, JavaScript, HTML, and CSS. Experienced in developing reusable components, integrating REST APIs, managing application state with Vuex and Pinia, and modernizing existing applications. I focus on creating maintainable code, improving UI performance, and delivering seamless user experiences.
+                    {/* About Content */}
+                    <div className="space-y-5 text-gray-400 text-base md:text-lg leading-relaxed">
 
+                        <p>
+                            I'm a <strong className="text-white font-semibold">Frontend Developer</strong> with{" "}
+                            <strong className="text-primary font-semibold">4.5+ years of experience</strong>{" "}
+                            building <strong className="text-white font-medium">responsive, scalable, and user-friendly web applications</strong> using{" "}
+                            <strong className="text-primary font-medium">React.js, Vue.js, JavaScript, HTML, and CSS.</strong>
                         </p>
 
-                        <p className="text-gray-400 text-base lg:text-lg mb-10 leading-relaxed">
-                            I specialize in React.js and Vue.js, with
-                            strong knowledge of JavaScript, HTML, CSS,
-                            and modern frontend technologies. I enjoy
-                            creating reusable components, improving UI
-                            performance, and transforming ideas into
-                            seamless user experiences.
+                        <p>
+                            My experience includes developing{" "}
+                            <strong className="text-white font-medium">reusable UI components</strong>, integrating{" "}
+                            <strong className="text-primary font-medium">REST APIs</strong>, managing application state using{" "}
+                            <strong className="text-primary font-medium">Vuex and Pinia</strong>, and{" "}
+                            <strong className="text-white font-medium">modernizing legacy applications.</strong>
                         </p>
 
-
+                        <p>
+                            I focus on writing <strong className="text-white font-medium">maintainable code</strong>, improving{" "}
+                            <strong className="text-primary font-medium">application performance</strong>, building consistent user interfaces, and delivering{" "}
+                            <strong className="text-white font-medium">reliable solutions</strong> that meet business requirements.
+                        </p>
 
                     </div>
 
                 </div>
-
             </div>
-
         </section>
     )
 }

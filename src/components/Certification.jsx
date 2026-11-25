@@ -1,92 +1,133 @@
 
-import { Award, Calendar, ExternalLink, ShieldCheck } from "lucide-react"
+import {
+    Award,
+    Calendar,
+    ExternalLink,
+    ShieldCheck,
+    GraduationCap
+} from "lucide-react"
+
+import certificateImage from "../assets/newton-certificate.webp"
 
 function CertificationsSection() {
 
-    const certifications = [
-        {
-            id: 1,
-            title: "Full Stack Web Development",
-            organization: "Web Development Bootcamp",
-            date: "Dec 2024",
-            description: "Completed a 6-month full-stack web development bootcamp covering HTML, CSS, JavaScript, React.js and Bootstrap.",
-            link: "#"
-        }
-    ]
+    const certification = {
+        title: "Full Stack Web Development",
+        organization: "Newton School",
+        date: "13 March 2022",
+        description:
+            "Successfully completed a 6-month Full Stack Web Development program covering HTML, CSS, JavaScript, React.js, Element UI, Element Plus and Bootstrap."
+    }
 
     return (
-        <section className="text-white py-20" id="certificates">
-
-            <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <section
+            className="text-white py-16 overflow-hidden"
+            id="certificates"
+        >
+            <div className="max-w-6xl mx-auto px-6 lg:px-10">
 
                 {/* Section Heading */}
-                <div className="mb-16">
+                <div
+                    className="text-center mb-12"
+                    data-aos="fade-up"
+                >
                     <p className="text-primary text-sm uppercase tracking-widest mb-2 font-semibold">
                         Achievements
                     </p>
 
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+                    <h2 className="text-4xl md:text-5xl font-extrabold">
                         Certifications.
                     </h2>
                 </div>
 
-                {/* Certification Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Certification Card */}
+                <div
+                    className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-[#111a3e] border border-[#1f1641] p-6 md:p-8 rounded-2xl group hover:border-primary/60 hover:-translate-y-1 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)] transition-all duration-500"
+                    data-aos="zoom-in"
+                    data-aos-duration="800"
+                >
 
-                    {certifications.map((cert) => (
+                    {/* Left Content */}
+                    <div>
 
-                        <div
-                            key={cert.id}
-                            data-aos="zoom-in"
-                            className="group relative bg-[#111a3e] border border-[#1f1641] p-6 rounded-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                        >
+                        <div className="flex items-center gap-3 mb-6">
 
-                            {/* Award Icon */}
-                            <div className="absolute -top-4 -right-4 bg-primary p-3 rounded-xl shadow-lg transform group-hover:rotate-12 transition-transform">
-                                <Award className="text-white" size={24} />
+                            <div className="w-12 h-12 rounded-xl bg-[#050816] border border-gray-700 flex items-center justify-center group-hover:border-primary/60 transition-colors duration-300">
+                                <Award
+                                    size={25}
+                                    className="text-primary"
+                                />
                             </div>
 
-                            {/* Organization and Date */}
-                            <div className="flex flex-wrap items-center gap-4 mb-4 text-xs text-gray-400">
-
-                                <span className="flex items-center gap-1">
-                                    <ShieldCheck size={14} className="text-primary" />
-                                    {cert.organization}
-                                </span>
-
-                                <span className="flex items-center gap-1">
-                                    <Calendar size={14} />
-                                    {cert.date}
-                                </span>
-
-                            </div>
-
-                            {/* Certificate Title */}
-                            <h2 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                                {cert.title}
-                            </h2>
-
-                            {/* Description */}
-                            <p className="text-gray-400 text-sm mb-6 line-clamp-2">
-                                {cert.description}
-                            </p>
-
-                            {/* Certificate Link */}
-                            <a
-                                href={cert.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-white transition-colors border-b border-transparent hover:border-white pb-1"
-                            >
-                                View Certificate
-                                <ExternalLink size={14} />
-                            </a>
+                            <span className="text-primary text-sm font-semibold">
+                                Certificate of Achievement
+                            </span>
 
                         </div>
 
-                    ))}
+                        <div className="flex flex-wrap items-center gap-4 mb-5 text-xs text-gray-400">
+
+                            <span className="flex items-center gap-2">
+                                <ShieldCheck
+                                    size={15}
+                                    className="text-primary"
+                                />
+                                {certification.organization}
+                            </span>
+
+                            <span className="flex items-center gap-2">
+                                <Calendar size={15} className="text-primary" />
+                                {certification.date}
+                            </span>
+
+                        </div>
+
+                        <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
+                            {certification.title}
+                        </h3>
+
+                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                            {certification.description}
+                        </p>
+
+                        <div className="flex items-center gap-2 text-xs text-primary font-semibold mb-7">
+                            <GraduationCap size={16} />
+                            Successfully Completed with Distinction
+                        </div>
+
+                        <a
+                            href={certificateImage}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-white transition-colors border-b border-transparent hover:border-white pb-1"
+                        >
+                            View Certificate
+                            <ExternalLink size={15} />
+                        </a>
+
+                    </div>
+
+                    {/* Right Certificate Preview */}
+                    <div className="relative">
+
+                        <div className="overflow-hidden rounded-xl border border-gray-700 group-hover:border-primary/50 transition-colors duration-300">
+                            <a
+                                href={certificateImage}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src={certificateImage}
+                                    alt="Newton School Full Stack Web Development Certificate"
+                                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                            </a>
+                        </div>
+
+                    </div>
 
                 </div>
+
             </div>
         </section>
     )

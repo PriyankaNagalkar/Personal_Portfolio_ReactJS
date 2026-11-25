@@ -5,7 +5,7 @@ import profile from "../assets/profile.png"
 function HeroSection() {
     return (
         <section
-            className="relative w-full min-h-[calc(100vh-88px)] flex items-center overflow-hidden"
+            className="relative w-full min-h-[75vh] flex items-center overflow-hidden pb-8 pt-16 pb-10"
             data-aos="zoom-in-up"
         >
             {/* Background glow */}

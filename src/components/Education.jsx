@@ -26,7 +26,7 @@ function Education() {
     return (
         <section
             id="education"
-            className="text-white py-20 overflow-hidden"
+            className="text-white pt-10 pb-16 overflow-hidden"
         >
             <div className="max-w-5xl mx-auto px-6">
 
